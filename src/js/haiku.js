@@ -13,12 +13,13 @@ export default class Haiku extends Poem {
       if (word.length <= 3) {
         syllableCount += 1;
         return syllableCount;
-      };
+      } else {
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/ig, '');
       word = word.replace(/^y/ig, '');
       word = word.match(/[aeiouy]{1,2}/ig).length;
       syllableCount += word;
       return syllableCount;
+      }
     });
     return syllableCount;
   }
@@ -26,6 +27,8 @@ export default class Haiku extends Poem {
     let lineSyllable = this.syllableCount(line);
     if (lineSyllable === 5) {
       return "wow"
+    } else {
+      return "not 5"
     }
   }
 }
