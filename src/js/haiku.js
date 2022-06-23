@@ -6,7 +6,7 @@ export default class Haiku extends Poem {
     //haiku is type 'haiku' for Poem.type
     this.line = line;
   }
-  vowelCount(line) {
+  syllableCount(line) {
     let splitLine = line.split(" ");
     let syllableCount = 0;
     splitLine.forEach(function(word) {
@@ -22,6 +22,14 @@ export default class Haiku extends Poem {
     });
     return syllableCount;
   }
+  lineCount(line) {
+    let lineSyllable = this.syllableCount(line);
+    if (lineSyllable === 5) {
+      return "wow"
+    }
+  }
+}
+
 
   // take hello -> hel lo
   // syllable(line) {
@@ -40,6 +48,3 @@ export default class Haiku extends Poem {
   //   });
   //   return syllableCounter;
   // }
-}
-
-

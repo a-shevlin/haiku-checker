@@ -7,7 +7,12 @@ describe ('Haiku', () => {
     });
   test('should return syllable count from line', () => {
     let newVowel = new Haiku('hello');
-    let vowelAmount = newVowel.vowelCount(newVowel.line);
+    let vowelAmount = newVowel.syllableCount(newVowel.line);
     expect(vowelAmount).toEqual(2);
   });
+  test('return wow on 5 syllables', () => {
+    let wowHaiku = new Haiku('this is a haiku');
+    let wowAmount = wowHaiku.lineCount(wowHaiku.line);
+    expect(wowAmount).toBe('wow');
+  }) 
 });
