@@ -1,10 +1,12 @@
 import Poem from './poem.js';
 
 export default class Haiku extends Poem {
-  constructor(line) {
+  constructor(line1, line2, line3) {
     super('haiku');
     //haiku is type 'haiku' for Poem.type
-    this.line = line;
+    this.line1 = line1;
+    this.line2 = line2;
+    this.line3 = line3;
   }
   syllableCount(line) {
     let splitLine = line.split(" ");
@@ -23,12 +25,20 @@ export default class Haiku extends Poem {
     });
     return syllableCount;
   }
-  lineCount(line) {
+  lineCount5(line) {
     let lineSyllable = this.syllableCount(line);
     if (lineSyllable === 5) {
-      return "wow"
+      return true;
     } else {
-      return "not 5"
+      return false;
+    }
+  }
+  lineCount7(line) {
+    let lineSyllable = this.syllableCount(line);
+    if (lineSyllable === 7) {
+      return true;
+    } else {
+      return false;
     }
   }
 }
