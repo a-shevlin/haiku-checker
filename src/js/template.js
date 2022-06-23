@@ -1,14 +1,15 @@
 //business logic
 
-class Template {
-
-  constructor() {
-    this.stuff = []
-  }
-
-  addJunk(array) {
-    array.forEach((thing) => {
-      this.stuff.push(thing);
-    });
+export default class Poem {
+  constructor(type) {
+    this.type = type;
   }
 }
+
+// export class Haiku extends Poem {
+//   constructor(type, line) {
+//     super('haiku');
+//     this.line = line;
+//   }
+  
+// }
