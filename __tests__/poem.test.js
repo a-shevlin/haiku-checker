@@ -1,4 +1,4 @@
-import Poem from '../src/js/template.js';
+import Poem from '../src/js/poem.js';
 
 describe ('Poem', () => {
 

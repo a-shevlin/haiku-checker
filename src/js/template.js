@@ -6,10 +6,10 @@ export default class Poem {
   }
 }
 
-// export class Haiku extends Poem {
+export class Haiku extends Poem {
 //   constructor(type, line) {
 //     super('haiku');
 //     this.line = line;
 //   }
   
-// }
+}
